@@ -1126,7 +1126,7 @@
             "value": "{\"instanceId\":\"xxxxxx\"}"
           }
         ],
-        "query": "{\"instanceId\":\"xxxxxx\"}, {\"instanceId\":\"xxxxxx\"},
+        "query": "{\"instanceId\":\"xxxxxx\"}, {\"instanceId\":\"xxxxxx\"}",
         "queryValue": "",
         "skipUrlSync": false,
         "type": "custom"
