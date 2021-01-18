@@ -13,3 +13,7 @@ Major metrics of Alibaba Cloud services：https://www.alibabacloud.com/help/zh/d
 # 说明
 
 因aliyun-cms获取不到instanceName，建议手动修改json中的text以便于维护
+
+# 爬坑
+
+2020年11月23日阿里云在没有任何公告的情况下，直接下线了SLB的健康检查监控，多次沟通后，在2021年1月13日优化迭代了健康检查的监控服务。解铃还须系铃人，不催就不会完善，开发快赶上PM了……哭笑
