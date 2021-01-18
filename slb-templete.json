@@ -762,7 +762,7 @@
         {
           "describe": "后端异常ECS实例个数",
           "dimensions": [
-            "{\"instanceId\":\"xxxxxx\";\"port\":\"443\";\"vip\":\"xxxxxx\"}"
+            "{"instanceId":"xxxxxx";"port":"443";"vip":"xxxxxx", "domain":"xxxxx",url:"/"}"
           ],
           "group": "",
           "metric": "UnhealthyServerCount",
@@ -781,7 +781,7 @@
         {
           "describe": "后端健康ECS实例个数",
           "dimensions": [
-            "{\"instanceId\":\"xxxxxx\";\"port\":\"443\";\"vip\":\"xxxxxx\"}"
+            "{"instanceId":"xxxxxx";"port":"443";"vip":"xxxxxx", "domain":"xxxxx",url:"/"}"
           ],
           "group": "",
           "metric": "HeathyServerCount",
