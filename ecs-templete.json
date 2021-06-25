@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 9,
-  "iteration": 1596108943862,
+  "iteration": 1624600296614,
   "links": [],
   "panels": [
     {
@@ -1100,8 +1100,118 @@
         "align": false,
         "alignLevel": null
       }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "aliyun",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 41
+      },
+      "hiddenSeries": false,
+      "id": 22,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.1",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "describe": "",
+          "dimensions": [
+            "$instance;$disk"
+          ],
+          "group": "",
+          "metric": "diskusage_used",
+          "period": "900",
+          "project": "acs_ecs_dashboard",
+          "refId": "A",
+          "target": [
+            "Maximum",
+            "Average",
+            "Minimum"
+          ],
+          "type": "timeserie",
+          "xcol": "timestamp",
+          "ycol": [
+            "Maximum",
+            "Average",
+            "Minimum"
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "主硬盘使用量",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     }
   ],
+  "refresh": "10s",
   "schemaVersion": 26,
   "style": "dark",
   "tags": [],
@@ -1111,8 +1221,8 @@
         "allValue": null,
         "current": {
           "selected": true,
-          "text": "{\"instanceId\":\"i-2ze8ufyse4h7decf6yvj\"}",
-          "value": "{\"instanceId\":\"i-2ze8ufyse4h7decf6yvj\"}"
+          "text": "ECS-xxxxxxxxxxx",
+          "value": "{\"instanceId\":\"i-xxxxxxxxxxx\"}"
         },
         "hide": 0,
         "includeAll": false,
@@ -1121,12 +1231,41 @@
         "name": "instance",
         "options": [
           {
-            "selected": true,
-            "text": "{\"instanceId\":\"xxxxxx\"}",
-            "value": "{\"instanceId\":\"xxxxxx\"}"
+            "selected": false,
+            "text": "ECS-xxxxxxxxxxx",
+            "value": "{\"instanceId\":\"i-xxxxxxxxxxx\"}"
+          },
+          {
+            "selected": false,
+            "text": "ECS-xxxxxxxxxxx",
+            "value": "{\"instanceId\":\"i-xxxxxxxxxxx\"}"
           }
         ],
-        "query": "{\"instanceId\":\"xxxxxx\"}, {\"instanceId\":\"xxxxxx\"}",
+        "query": "{\"instanceId\":\"i-xxxxxxxxxxx\"}, {\"instanceId\":\"i-xxxxxxxxxxx\"}",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "allValue": "",
+        "current": {
+          "selected": false,
+          "text": "{\"device\":\"/dev/vda1\"}",
+          "value": "{\"device\":\"/dev/vda1\"}"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "disk",
+        "options": [
+          {
+            "selected": true,
+            "text": "{\"device\":\"/dev/vda1\"}",
+            "value": "{\"device\":\"/dev/vda1\"}"
+          }
+        ],
+        "query": "{\"device\":\"/dev/vda1\"}",
         "queryValue": "",
         "skipUrlSync": false,
         "type": "custom"
@@ -1134,7 +1273,7 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {
@@ -1153,5 +1292,5 @@
   "timezone": "",
   "title": "ECS监控",
   "uid": "K8Y3M04Gz",
-  "version": 32
+  "version": 77
 }
